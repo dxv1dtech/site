@@ -53,7 +53,6 @@ body {
         align-items: flex-start; /* Align items to the start */
         padding: 10px; /* Less padding on mobile */
         background-color: #36454F; /* Set a solid background for mobile view */
-        border-radius: 10px; /* Add border radius to corners */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
     }
 
