@@ -4,4 +4,5 @@
 3) comment section powered by giscus
 
 * To be added features:
-authentification system, that lets you authentificate using github (https://developer.okta.com/blog/2018/06/08/add-authentication-to-any-web-page-in-10-minutes);
+1) blog section
+2) projects section
