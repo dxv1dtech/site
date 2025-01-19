@@ -81,6 +81,6 @@ body {
     text-align: justify;
 }
 
-.content-container h1, p{
+.content-container h1, h2, p{
     color: white;
 }
