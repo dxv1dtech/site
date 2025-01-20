@@ -1,86 +1,132 @@
+*{
+    font-family: 'Kanit', sans-serif;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: cornflowerblue;
+    background-color: #1a1a33;
 }
 .navbar{
     display: flex;
-    justify-content: center; /* Center the navbar items */
-    align-items: center; /* Vertically align items */
-    padding: 15px 20px; /* Space around the navbar items */
-    position: fixed; /* Make navbar fixed at the top */
-    background-color: royalblue;
-    top: 0; /* Align to the top */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Ensure it stays on top of other content */
+    justify-content: center; 
+    align-items: center; 
+    padding: 15px 20px; 
+    position: fixed; 
+    background-color: #0B0B16;
+    left: 0;
+    right: 0;
+    top: 10px;
+    border-radius: 3vh;
+    margin: 0 auto;
+    width: 70%; 
+    max-width: 700px;
+    z-index: 1000;
 }
 .logo{
-    color: #F6F4F0;
-    font-size: 24px; /* Logo font size */
-    margin-right: 20px; /* Space between logo and nav links */
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    background-clip: text;
+    color: transparent;
+    font-size: 24px;
+    margin-right: 20px;
     text-decoration: underline;
 }
 .nav-links{
-    list-style: none; /* Remove default list styles */
-    display: flex; /* Flexbox for horizontal layout */
-    gap: 15px; /* Space between links */
+    list-style: none;
+    display: flex;
+    gap: 15px;
 }
 .nav-links li{
-    display: inline; /* Display list items inline */
+    display: inline;
 }
 .nav-links a{
-    color: #F6F4F0; /* Text color */
-    text-decoration: none; /* Remove underline */
-    padding: 10px 15px; /* Space around links */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    color: #F6F4F0;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
 }
 .nav-links a:hover{
-    background-color: #899499; /* Change background on hover */
+    background-color: #899499;
     border-radius: 2vh;
 }
 /* Responsive Styles */
 @media (max-width: 768px){
     .navbar {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
-        padding: 10px; /* Less padding on mobile */
-        background-color: #36454F; /* Set a solid background for mobile view */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 10px;
+        top: 0;
+        border-radius: 0;
+        background-color: #0B0B16;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
     .nav-links{
-        flex-direction: column; /* Stack links vertically */
-        display: none; /* Hide by default */
-        width: auto; /* Auto width to fit content */
-        margin-top: 10px; /* Space above the links */
+        flex-direction: column;
+        display: none;
+        width: auto;
+        margin-top: 10px;
     }
     .nav-links.active{
-        display: flex; /* Show links when active */
+        display: flex;
     }
     .toggle-btn{
-        cursor: pointer; /* Change cursor to pointer */
-        font-size: 24px; /* Increase font size for visibility */
-        color: white; /* Color for the toggle button */
-        margin-bottom: 10px; /* Space below the toggle button */
-        display: block; /* Make sure it is displayed on mobile */
+        cursor: pointer;
+        font-size: 24px;
+        color: white;
+        margin-bottom: 10px;
+        display: block;
     }
 }
-/* Hide the toggle button on larger screens */
+
 @media (min-width: 769px){
     .toggle-btn {
-        display: none; /* Hide the toggle button on larger screens */
+        display: none;
     }
 }
 .content-container{
-    max-width: 800px; /* Maximum width of the container */
-    margin: 80px auto 0; /* Center horizontally, add top margin to avoid overlap with navbar */
-    padding: 0 20px; /* Padding to prevent text from touching the edges */
-    text-align: center; /* Center text within the container */
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 0 20px;
+    text-align: center;
     padding-top: 3vh;
     font-size: 3vh;
     text-align: justify;
 }
-
-.content-container h1, p{
-    color: white;
+.content-container h1, h2, p{
+    color: #C6C6F1;
+}
+.content-container h2{
+    text-decoration: underline;
+}
+.content-container img{
+    border-radius: 3vh;
+}
+.content-container{
+    opacity: 0;
+    animation: fadeIn1 1s ease-out forwards;
+}
+@keyframes fadeIn1 {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+nav{
+    opacity: 0;
+    animation: fadeIn2 1s ease-in forwards;
+}
+@keyframes fadeIn2 {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
